@@ -7,7 +7,25 @@ class EditUser extends LitElement {
     };
   }
 
-  // din kode her
+  
+  constructor(){
+    super();
+  
+    fetch('api/fetchUser.php'+ , {
+      method: 'GET',
+      credentials: "include"
+  }).then(res => res.json()
+  ).then(data => {
+      console.log(data);
+      this.users = JSON.parse(JSON.stringify(data));
+  });
+  }
+
+
+
+
+
+    
 
 }
 customElements.define('edit-user', EditUser);
