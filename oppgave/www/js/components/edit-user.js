@@ -22,7 +22,7 @@ class EditUser extends LitElement {
 <form id="accountinfo" method="post">          
 <label>
    <div>User name</div>
-   <input type="text" name="uname" value="${this.user.uname}" >
+   <input type="text" name="uname" value="${this.user.uname}">
  </label>
 
 <label>
